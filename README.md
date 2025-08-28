@@ -1,46 +1,48 @@
-📷 FaceTrack: Smart Face Recognition Attendance System
+# 📷 FaceTrack: Smart Face Recognition Attendance System  
 
-Welcome to FaceTrack, a real-time Face Recognition Attendance Management System built using the MERN stack with OpenCV + face-recognition (Python microservice) for accurate detection.
-It provides a secure and automated way to mark attendance, designed especially for college/classroom environments.
+Welcome to **FaceTrack**, a real-time **Face Recognition Attendance Management System** built using the **MERN stack** with a **Python microservice** for accurate face detection.  
+This project is designed for **college attendance automation** with role-based access for Admins, Faculty, and Students.  
 
-🚀 Features
-👩‍💼 Admin / Faculty
+---
 
-🔐 Secure login with JWT authentication
+## 🚀 Features  
 
-👨‍🎓 Add and manage student records
+### 👩‍💼 Admin / Faculty  
+- 🔐 Secure login with JWT authentication  
+- 👨‍🎓 Add & manage student records  
+- 📸 Capture & upload face data  
+- 🧠 Train recognition model (Python + OpenCV)  
+- 📅 View & edit attendance records  
+- 📊 Generate downloadable reports  
 
-📸 Capture & upload face data
+### 👨‍🎓 Student  
+- 🔐 Secure login  
+- 🕘 Mark **Time In / Time Out** using face recognition  
+- 📈 View personal attendance history  
 
-🧠 Train recognition model via Python microservice
+---
 
-📅 View & edit attendance records
+## 🛠️ Tech Stack  
 
-📊 Generate downloadable reports
+| 💻 Frontend | ⚙️ Backend | 🧠 Face Recognition | 🗄️ Database |  
+|-------------|------------|----------------------|--------------|  
+| React.js + TailwindCSS | Node.js + Express.js | Python, OpenCV, face_recognition | MongoDB Atlas |  
 
-👨‍🎓 Student
+---
 
-🔐 Secure login
+## 🖥️ Installation & Setup  
 
-🕘 Mark Time In / Time Out using face recognition
-
-📈 View personal attendance history
-
-🛠️ Tech Stack
-💻 Frontend	⚙️ Backend	🧠 Face Recognition	🗄️ Database
-React.js + TailwindCSS	Node.js + Express.js	Python, OpenCV, face_recognition	MongoDB Atlas
-🖥️ Setup Instructions
-1️⃣ Clone the Repository
+### 1️⃣ Clone the Repository  
+```bash
 git clone https://github.com/<your-username>/face-recognition-attendance-system.git
 cd face-recognition-attendance-system
-
-2️⃣ Frontend Setup (React)
+2️⃣ Frontend Setup (React + Vite)
 cd frontend
 npm install
 npm run dev
 
 
-🌐 Runs at: http://localhost:5173 (Vite)
+🌐 App runs at: http://localhost:5173
 
 3️⃣ Backend Setup (Node.js + Express)
 cd backend
@@ -48,19 +50,17 @@ npm install
 npm run dev
 
 
-🛠️ Backend API runs at: http://localhost:5000
+🛠️ API runs at: http://localhost:5000
 
-4️⃣ Face Recognition Microservice (Python)
+4️⃣ Face Recognition Microservice (Python + OpenCV)
 cd face-service
 python -m venv venv
-venv\Scripts\activate   # (use source venv/bin/activate on macOS/Linux)
+venv\Scripts\activate   # Windows  
+source venv/bin/activate  # macOS/Linux  
 pip install -r requirements.txt
 python app.py
 
-
-🔁 This service handles face detection, encoding, and verification.
-
-🗂️ Folder Structure for Face Data
+🗂️ Dataset Structure
 dataset/
 ├── Student1/
 │   ├── img1.jpg
@@ -70,7 +70,7 @@ dataset/
 │   └── img2.jpg
 
 
-📸 Each folder = one student’s data.
+📸 Each folder represents one student’s face data.
 
 📊 Reporting Dashboard
 
@@ -80,9 +80,12 @@ dataset/
 
 📂 Export reports as .CSV
 
-🎯 Goals & Scope
+🎯 Project Goals
 
 ✅ Real-time MERN + AI integration
-✅ Student, Faculty & Admin roles
-✅ Scalable for colleges & organizations
-✅ Professional UI with TailwindCSS
+
+✅ Role-based system (Admin, Faculty, Student)
+
+✅ Automated attendance using face recognition
+
+✅ Professional dashboard with TailwindCSS
